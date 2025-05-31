@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./library.js" defer></script>
+</head>
+<body>    
+    <dialog id="formDialog">
+        <form id="my_form" name="my_form" method="dialog" action="">                        
+            <div class="inner-inputs1">
+                <div>   
+                    <span id="message"></span>                     
+                    <label for="book_title" data-help="Enter the book's title">Book Title</label> 
+                    <input type="text" class="book_info" 
+                            id="book_title" 
+                            name="book_title"
+                            minlength="2"
+                            maxlength="50"
+                            placeholder="Enter the book's title"
+                            pattern="^[A-Za-z0-9 ]{2,50}$"
+                            title="Between 2 & 50 characters, only letters and numbers accepted"
+                            required>
+                    <span></span>
+                </div>
+                <div>                        
+                    <label for="book_author" data-help="Enter the book's author">Book Author</label>
+                    <input type="text" class="book_info" 
+                            id="book_author" 
+                            name="book_author"
+                            minlength="2"
+                            maxlength="50"
+                            placeholder="Enter the book's author"
+                            pattern="^[A-Za-z ]{2,50}$"
+                            title="Between 2 & 50 characters, only letters accepted"
+                            required>
+                    <span></span>
+                </div>
+                <div>                        
+                    <label for="book_pages" data-help="Number of pages in book">Number of Pages</label>                                
+                    <input type="number" class="book_info" 
+                            id="book_pages" 
+                            name="book_pages"
+                            min="1"
+                            max="9999"
+                            placeholder="1 - 9999"
+                            pattern="^[0-9]{1,9999}$"
+                            title="Whole numbers between 1 and 9999 (ie. 400 or 527, etc.)"
+                            required>
+                    <span></span>
+                </div>
+                <div>                        
+                    <label for="book_read" data-help="Have you read the book?">Have you read the book?</label> 
+                    <select class="book_info" id="book_read" name="book_read" required>
+                        <option value=""> --Choose-- </option>
+                        <option value="yes">Yes</option>                          
+                        <option value="no">No</option>
+                    </select>
+                </div> 
+                <div id="form_buttons">
+                    <button class="book_info" id="submit" form="my_form" type="submit">Add Book</button>                     
+                    <button class="book_info" id="cancel">Cancel</button>
+                </div>                 
+            </div>               
+        </form>
+    </dialog>
+    <div id="container">
+      <div id="header">
+        <h1>Library</h1> 
+        <button id="add">Add to Collection</button>
+      </div>
+      <div class="middle">       
+        <div id="books"></div>
+      </div> 
+    </div>    
+</body>
+</html>
