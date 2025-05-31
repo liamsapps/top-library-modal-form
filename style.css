@@ -128,7 +128,8 @@ dialog {
 /* Dim page behind dialog */
 .dim {    
     /* only applies to body background, not cards !!! */
-    box-shadow: inset 0 0 1000px 1000px black;    
+    /* box-shadow: inset 0 0 1000px 1000px #273c47;     */
+    box-shadow: inset 0 0 1000px 1000px black;
 }
 
 /* Inputs */
@@ -194,3 +195,10 @@ button {
     width: 6.5rem;
     padding: 0.5rem 0.5rem;
 }
+
+*:disabled {
+    background-color: dimgrey;
+    color: linen;
+    opacity: 1;
+}
+
