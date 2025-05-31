@@ -26,7 +26,7 @@ body {
 
 #header {
     /* ensure header doesn't shrink */
-    flex: 1 0 4rem;
+    flex: 0 0 4rem;
     display: flex;    
     align-items: center;
     gap: 1.5rem;
